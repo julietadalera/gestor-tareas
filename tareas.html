@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mis tareas | Gestor de Tareas</title>
+</head>
+<body>
+
+  <header>
+    <h1>Gestor de Tareas</h1>
+    <nav aria-label="Navegación principal">
+      <ul>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="tareas.html" aria-current="page">Mis tareas</a></li>
+        <li><a href="nueva-tarea.html">Nueva tarea</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section aria-labelledby="titulo-filtros">
+      <h2 id="titulo-filtros">Filtrar tareas</h2>
+      <form action="tareas.html" method="get">
+        <p>
+          <label for="buscar">Buscar por título</label><br>
+          <input type="search" id="buscar" name="buscar" placeholder="Escribe una palabra">
+        </p>
+        <p>
+          <label for="filtro-estado">Estado</label><br>
+          <select id="filtro-estado" name="estado">
+            <option value="todas" selected>Todas</option>
+            <option value="pendiente">Pendientes</option>
+            <option value="completada">Completadas</option>
+          </select>
+        </p>
+        <p>
+          <label for="desde">Desde</label>
+          <input type="date" id="desde" name="desde">
+          <label for="hasta">Hasta</label>
+          <input type="date" id="hasta" name="hasta">
+        </p>
+        <p>
+          <button type="submit">Aplicar filtros</button>
+          <button type="reset">Quitar filtros</button>
+        </p>
+      </form>
+    </section>
+
+    <section aria-labelledby="titulo-listado">
+      <h2 id="titulo-listado">Listado de tareas</h2>
+
+      <table>
+        <caption>Tareas registradas en el sistema</caption>
+        <thead>
+          <tr>
+            <th scope="col">N.º</th>
+            <th scope="col">Título</th>
+            <th scope="col">Descripción</th>
+            <th scope="col">Fecha límite</th>
+            <th scope="col">Estado</th>
+            <th scope="col">Acciones</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">1</th>
+            <td>Entregar Sprint 1</td>
+            <td>Subir el PDF con capturas y enlace del repositorio al Moodle.</td>
+            <td><time datetime="2026-11-20">20/11/2026</time></td>
+            <td>Pendiente</td>
+            <td>
+              <button type="button">Completar</button>
+              <button type="button">Eliminar</button>
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">2</th>
+            <td>Preparar README</td>
+            <td>Documentar objetivo del proyecto e integrantes.</td>
+            <td><time datetime="2026-11-18">18/11/2026</time></td>
+            <td>Completada</td>
+            <td>
+              <button type="button">Eliminar</button>
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">3</th>
+            <td>Estudiar para el examen</td>
+            <td>Repasar HTML5 semántico y formularios.</td>
+            <td><time datetime="2026-11-25">25/11/2026</time></td>
+            <td>Pendiente</td>
+            <td>
+              <button type="button">Completar</button>
+              <button type="button">Eliminar</button>
+            </td>
+          </tr>
+        </tbody>
+        <tfoot>
+          <tr>
+            <th scope="row" colspan="4">Total de tareas</th>
+            <td colspan="2">3 (2 pendientes, 1 completada)</td>
+          </tr>
+        </tfoot>
+      </table>
+
+      <p><a href="nueva-tarea.html">+ Agregar otra tarea</a></p>
+    </section>
+
+    <aside aria-labelledby="titulo-resumen">
+      <h2 id="titulo-resumen">Próximos vencimientos</h2>
+      <ol>
+        <li>Preparar README - 18/11/2026</li>
+        <li>Entregar Sprint 1 - 20/11/2026</li>
+        <li>Estudiar para el examen - 25/11/2026</li>
+      </ol>
+    </aside>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Gestor de Tareas. Proyecto académico - Sprint 1.</p>
+  </footer>
+
+</body>
+</html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Sistema de gestión de tareas: registra, visualiza, filtra y elimina tus tareas pendientes.">
+  <title>Inicio | Gestor de Tareas</title>
+</head>
+<body>
+
+  <header>
+    <img src="img/logo.svg" alt="Logo del Gestor de Tareas: una marca de verificación blanca sobre fondo azul" width="60" height="60">
+    <h1>Gestor de Tareas</h1>
+    <p>Organiza tus pendientes de forma simple.</p>
+
+    <nav aria-label="Navegación principal">
+      <ul>
+        <li><a href="index.html" aria-current="page">Inicio</a></li>
+        <li><a href="tareas.html">Mis tareas</a></li>
+        <li><a href="nueva-tarea.html">Nueva tarea</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section aria-labelledby="titulo-bienvenida">
+      <h2 id="titulo-bienvenida">Bienvenido</h2>
+      <p>
+        El <strong>Gestor de Tareas</strong> es una aplicación web que permite
+        <em>registrar, visualizar, filtrar y eliminar</em> tareas pendientes.
+        Cada tarea tiene un título, una descripción, una fecha y un estado
+        (pendiente o completada).
+      </p>
+      <p>
+        <a href="nueva-tarea.html">Crear mi primera tarea</a> o
+        <a href="tareas.html">ver mis tareas</a>.
+      </p>
+    </section>
+
+    <section aria-labelledby="titulo-funciones">
+      <h2 id="titulo-funciones">¿Qué puedes hacer?</h2>
+      <ul>
+        <li>Registrar tareas nuevas con título, descripción y fecha.</li>
+        <li>Visualizar todas tus tareas en una tabla ordenada.</li>
+        <li>Filtrar tareas por estado o por texto.</li>
+        <li>Eliminar las tareas que ya no necesitas.</li>
+      </ul>
+    </section>
+
+    <section aria-labelledby="titulo-pasos">
+      <h2 id="titulo-pasos">Cómo empezar</h2>
+      <ol>
+        <li>Ve a la página <a href="nueva-tarea.html">Nueva tarea</a>.</li>
+        <li>Completa el formulario y guarda la tarea.</li>
+        <li>Consulta el listado en <a href="tareas.html">Mis tareas</a>.</li>
+        <li>Marca como completadas o elimina las tareas cuando corresponda.</li>
+      </ol>
+    </section>
+
+    <article>
+      <header>
+        <h2>Consejo del día</h2>
+      </header>
+      <p>Divide las tareas grandes en tareas pequeñas: son más fáciles de completar.</p>
+      <footer>
+        <p><small>Publicado el <time datetime="2026-11-16">16 de noviembre de 2026</time></small></p>
+      </footer>
+    </article>
+
+    <aside aria-labelledby="titulo-estados">
+      <h2 id="titulo-estados">Estados de una tarea</h2>
+      <dl>
+        <dt>Pendiente</dt>
+        <dd>La tarea todavía no fue realizada.</dd>
+        <dt>Completada</dt>
+        <dd>La tarea ya fue finalizada.</dd>
+      </dl>
+    </aside>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Gestor de Tareas. Proyecto académico - Sprint 1.</p>
+    <p>Integrantes: Julieta Dalera.</p>
+  </footer>
+
+</body>
+</html>

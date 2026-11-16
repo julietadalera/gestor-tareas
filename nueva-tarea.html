@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nueva tarea | Gestor de Tareas</title>
+</head>
+<body>
+
+  <header>
+    <h1>Gestor de Tareas</h1>
+    <nav aria-label="Navegación principal">
+      <ul>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="tareas.html">Mis tareas</a></li>
+        <li><a href="nueva-tarea.html" aria-current="page">Nueva tarea</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section aria-labelledby="titulo-form">
+      <h2 id="titulo-form">Registrar nueva tarea</h2>
+      <p>Los campos marcados con <strong>*</strong> son obligatorios.</p>
+
+      <form action="tareas.html" method="post">
+
+        <fieldset>
+          <legend>Datos de la tarea</legend>
+
+          <p>
+            <label for="titulo">Título *</label><br>
+            <input type="text" id="titulo" name="titulo" required minlength="3" maxlength="60"
+                   placeholder="Ej: Entregar informe de Sprint 1">
+          </p>
+
+          <p>
+            <label for="descripcion">Descripción</label><br>
+            <textarea id="descripcion" name="descripcion" rows="5" cols="40" maxlength="300"
+                      placeholder="Detalles de la tarea (máx. 300 caracteres)"></textarea>
+          </p>
+
+          <p>
+            <label for="fecha">Fecha límite *</label><br>
+            <input type="date" id="fecha" name="fecha" required>
+          </p>
+
+          <p>
+            <label for="prioridad">Prioridad</label><br>
+            <select id="prioridad" name="prioridad">
+              <option value="">-- Selecciona una prioridad --</option>
+              <option value="alta">Alta</option>
+              <option value="media" selected>Media</option>
+              <option value="baja">Baja</option>
+            </select>
+          </p>
+        </fieldset>
+
+        <fieldset>
+          <legend>Estado inicial *</legend>
+          <p>
+            <input type="radio" id="estado-pendiente" name="estado" value="pendiente" checked required>
+            <label for="estado-pendiente">Pendiente</label>
+          </p>
+          <p>
+            <input type="radio" id="estado-completada" name="estado" value="completada">
+            <label for="estado-completada">Completada</label>
+          </p>
+        </fieldset>
+
+        <fieldset>
+          <legend>Notificación (opcional)</legend>
+          <p>
+            <label for="email">Correo para recordatorio</label><br>
+            <input type="email" id="email" name="email" placeholder="nombre@correo.com">
+          </p>
+          <p>
+            <input type="checkbox" id="recordatorio" name="recordatorio" value="si">
+            <label for="recordatorio">Quiero recibir un recordatorio</label>
+          </p>
+        </fieldset>
+
+        <p>
+          <button type="submit">Guardar tarea</button>
+          <button type="reset">Limpiar formulario</button>
+        </p>
+
+      </form>
+    </section>
+
+    <aside aria-labelledby="titulo-ayuda">
+      <h2 id="titulo-ayuda">Ayuda</h2>
+      <ul>
+        <li>El título debe tener al menos 3 caracteres.</li>
+        <li>La fecha límite es obligatoria.</li>
+        <li>El correo solo se usa si activas el recordatorio.</li>
+      </ul>
+    </aside>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Gestor de Tareas. Proyecto académico - Sprint 1.</p>
+  </footer>
+
+</body>
+</html>
